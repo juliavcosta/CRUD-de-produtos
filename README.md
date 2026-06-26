@@ -29,7 +29,7 @@ Pré-requisito: ter o [Docker Desktop](https://www.docker.com/products/docker-de
 
 ```bash
 #1. Clone o repositório
-git clone https://github.com/seu_user/CRUD-de-produtos.git
+git clone https://github.com/juliavcosta/CRUD-de-produtos.git
 cd CRUD-de-produtos
 
 #2. Build da imagem e start do container
@@ -46,7 +46,7 @@ Para rodar novamente depois (sem precisar rebuildar): `docker compose up`.
 
 ```bash
 #1. Clone o repositório
-git clone https://github.com/seu_user/CRUD-de-produtos.git
+git clone https://github.com/juliavcosta/CRUD-de-produtos.git
 cd CRUD-de-produtos
 
 #2. Crie e ative um ambiente virtual
