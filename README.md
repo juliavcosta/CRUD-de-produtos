@@ -1,4 +1,4 @@
-# Desafio Técnico — CRUD de Produtos
+# Desafio técnico — CRUD de produtos
 
 CRUD simples de produtos desenvolvido em Python + Django, com persistência em SQLite,
 validação de dados no backend e uma interface web que carrega/exclui produtos via AJAX.
