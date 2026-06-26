@@ -1,0 +1,46 @@
+{% extends "produtos/base.html" %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">{{ titulo }}</h2>
+
+<form method="post" novalidate>
+    {% csrf_token %}
+
+    <div class="mb-3">
+        <label class="form-label">Nome</label>
+        {{ form.nome }}
+        {% if form.nome.errors %}
+            <div class="text-danger small mt-1">{{ form.nome.errors|join:", " }}</div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Descrição</label>
+        {{ form.descricao }}
+        {% if form.descricao.errors %}
+            <div class="text-danger small mt-1">{{ form.descricao.errors|join:", " }}</div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Preço (R$)</label>
+        {{ form.preco }}
+        {% if form.preco.errors %}
+            <div class="text-danger small mt-1">{{ form.preco.errors|join:", " }}</div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Quantidade</label>
+        {{ form.quantidade }}
+        {% if form.quantidade.errors %}
+            <div class="text-danger small mt-1">{{ form.quantidade.errors|join:", " }}</div>
+        {% endif %}
+    </div>
+
+    <button type="submit" class="btn btn-success">Salvar</button>
+    <a href="{% url 'produtos:list_page' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

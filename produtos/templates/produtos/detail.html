@@ -1,0 +1,27 @@
+{% extends "produtos/base.html" %}
+
+{% block title %}{{ produto.nome }}{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">{{ produto.nome }}</h2>
+
+<dl class="row">
+    <dt class="col-sm-3">ID</dt>
+    <dd class="col-sm-9">{{ produto.id }}</dd>
+
+    <dt class="col-sm-3">Descrição</dt>
+    <dd class="col-sm-9">{{ produto.descricao|default:"—" }}</dd>
+
+    <dt class="col-sm-3">Preço</dt>
+    <dd class="col-sm-9">R$ {{ produto.preco }}</dd>
+
+    <dt class="col-sm-3">Quantidade</dt>
+    <dd class="col-sm-9">{{ produto.quantidade }}</dd>
+
+    <dt class="col-sm-3">Criado em</dt>
+    <dd class="col-sm-9">{{ produto.criado_em }}</dd>
+</dl>
+
+<a href="{% url 'produtos:update' produto.id %}" class="btn btn-primary">Editar</a>
+<a href="{% url 'produtos:list_page' %}" class="btn btn-secondary">Voltar</a>
+{% endblock %}
